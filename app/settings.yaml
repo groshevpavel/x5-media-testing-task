@@ -1,0 +1,9 @@
+APP_NAME: x5-test
+
+DB:
+  HOST: postgres
+  PORT: 5432
+  SCHEMA: public
+  USER: x5_test_pg_user
+  PASSWORD: zasxcdfv
+  DB_NAME: x5_test

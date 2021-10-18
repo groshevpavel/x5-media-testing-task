@@ -1,0 +1,7 @@
+pytest
+pytest-cov
+pytest-env
+pytest-asyncio
+requests
+starlette
+fastapi

@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  x5-test:
+    build:
+      context: .
+    volumes:
+      - '.:/opt/x5-test'
+    ports:
+      - "80:80"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: zasxcdfv
+      POSTGRES_USER: x5_test_pg_user
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+      - ./migrations/init-sql:/docker-entrypoint-initdb.d
+
+volumes:
+  pg-data: {}
